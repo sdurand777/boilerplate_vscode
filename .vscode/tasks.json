@@ -2,33 +2,19 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "CMake: Configure",
+      "label": "CMake: Build",
       "type": "shell",
       "command": "bash",
       "args": [
         "-c",
-        "mkdir -p ${workspaceFolder}/build && cmake -S ${workspaceFolder} -B ${workspaceFolder}/build"
+        "if [ ! -d '${workspaceFolder}/build' ]; then cmake -S ${workspaceFolder} -B ${workspaceFolder}/build; fi && cmake --build ${workspaceFolder}/build --config Debug"
       ],
       "group": {
         "kind": "build",
         "isDefault": true
       },
       "problemMatcher": []
-    },
-    {
-      "label": "CMake: Build",
-      "type": "shell",
-      "command": "bash",
-      "args": [
-        "-c",
-        "mkdir -p ${workspaceFolder}/build && cmake --build ${workspaceFolder}/build --config Debug"
-      ],
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      },
-      "dependsOn": "CMake: Configure",
-      "problemMatcher": []
     }
   ]
 }
+
