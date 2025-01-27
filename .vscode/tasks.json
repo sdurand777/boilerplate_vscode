@@ -4,12 +4,10 @@
     {
       "label": "CMake: Configure",
       "type": "shell",
-      "command": "cmake",
+      "command": "bash",
       "args": [
-        "-S",
-        "${workspaceFolder}",
-        "-B",
-        "${workspaceFolder}/build"
+        "-c",
+        "mkdir -p ${workspaceFolder}/build && cmake -S ${workspaceFolder} -B ${workspaceFolder}/build"
       ],
       "group": {
         "kind": "build",
@@ -20,18 +18,16 @@
     {
       "label": "CMake: Build",
       "type": "shell",
-      "command": "cmake",
+      "command": "bash",
       "args": [
-          "--build",
-          "${workspaceFolder}/build",
-          "--config",
-          "Debug"
+        "-c",
+        "mkdir -p ${workspaceFolder}/build && cmake --build ${workspaceFolder}/build --config Debug"
       ],
       "group": {
         "kind": "build",
         "isDefault": false
       },
-//      "dependsOn": "CMake: Configure",
+      "dependsOn": "CMake: Configure",
       "problemMatcher": []
     }
   ]

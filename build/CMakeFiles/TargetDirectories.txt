@@ -1,3 +1,0 @@
-/home/ivm/test_vscode/build/CMakeFiles/MyProject.dir
-/home/ivm/test_vscode/build/CMakeFiles/edit_cache.dir
-/home/ivm/test_vscode/build/CMakeFiles/rebuild_cache.dir

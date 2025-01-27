@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/ivm/test_vscode/build",
-  "command": "/usr/bin/g++-9   -g -g -std=gnu++17 -o CMakeFiles/MyProject.dir/src/main.cpp.o -c /home/ivm/test_vscode/src/main.cpp",
-  "file": "/home/ivm/test_vscode/src/main.cpp"
-}
-]
